@@ -4,10 +4,50 @@
 <head>
 	<title> Engineering Wine Society</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+
+	
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["table"]});
+      google.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var stars1 = '<div class="basic" data-average="12" data-id="1"></div>';
+				var stars2 = '<center><div class="rating"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div></center>';
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Rating');
+				
+        data.addRows([
+          ['<center><img src="images/VinoNobile.jpg" alt="Smiley face" height="100" width="100"></center>',stars2],
+          ['<center><img src="images/VinoNobile.jpg" alt="Smiley face" height="100" width="100"></center>',stars2],
+          ['<center><img src="images/VinoNobile.jpg" alt="Smiley face" height="100" width="100"></center>',stars2],
+          ['<center><img src="images/VinoNobile.jpg" alt="Smiley face" height="100" width="100"></center>',stars2],
+          ['<center><img src="images/VinoNobile.jpg" alt="Smiley face" height="100" width="100"></center>',stars2],
+					
+
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+           table.draw(data, {showRowNumber: false, allowHtml:true});
+
+         }
+
+				 
+    </script>
+	
+		
 </head>
 <!-- DataTables, fattable, infinity.js -->
 <body>
-	<h1> Engineering Wine Society</h1>
+	  <div class="jumbotron">
+			<h1>Jared Arnold</h1>
+			<img src="images/jared.jpg" alt="Smiley face" height="200" width="250">
+		</div>
+    <div id="table_div"></div>
+	
 </body>
 
 
