@@ -12,3 +12,41 @@
    content: "\2605";
    position: absolute;
 }
+
+.jumbotron {
+
+}
+
+.jumbotron h2{
+
+  text-align: left;
+
+}
+
+#login {
+
+  float: right;
+  
+}
+
+td {
+
+ background-color: rgb(237,237,237);
+}
+
+.cellClass {
+ background-color: rgb(237,237,237);
+
+}
+
+#table_div {
+
+  padding: 20px;
+  top: 50px;
+
+}
+
+.jumbotron h1 {
+
+  text-align: center;
+}
