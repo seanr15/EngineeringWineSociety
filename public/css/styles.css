@@ -1,0 +1,89 @@
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color: gold;
+}
+
+.jumbotron {
+
+}
+
+.jumbotron h2{
+
+  text-align: left;
+
+}
+
+#login {
+
+  float: right;
+  
+}
+
+
+/*.cellClass {
+ background-color: rgb(237,237,237);
+
+}*/
+
+#table_div {
+
+  padding: 20px;
+  top: 50px;
+
+}
+
+.jumbotron h1 {
+
+  text-align: center;
+}
+
+#EWS {
+
+  color: #FFFFFF;
+
+}
+
+#tbl {
+
+  padding: 50px;
+
+
+}
+
+.back {
+
+  position: absolute;
+  top: 50px;
+  float: left;
+
+}
+
+.space {
+
+  height: 50px;
+
+}
+
+
+form {
+
+  padding: 40px;
+
+}
+
+#add_wine {
+
+  padding: 15px;
+
+}
