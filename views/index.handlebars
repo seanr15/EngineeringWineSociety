@@ -169,7 +169,16 @@
   
   </table>
   </div>
-	<table>
+	 <div id="tbl">
+
+	<table class= "table table-striped table-hover" id="example">
+	<tr>
+     	<th><center>Label</center></th>
+      <th><center>Varietal</center></th>
+      <th><center>Vintage</center></th>
+      <th><center>Winery</center></th>
+      <th><center>Rating</center></th>
+	</tr>
 	
 	{{#each allwines}}
      <tr>
@@ -179,10 +188,13 @@
 			
 	  	<td><h3>{{varietal}}</h3></td>
 	  	<td><h3>{{vineyard}}</h3></td>
+      <td><center><div class="rating"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div></center></td>
+			
 		</tr>
 	{{/each}}
  
 	</table>
+	</div>
 
 	
   <script  type="text/javascript" src="/js/jquery-1.11.0.js"></script>
