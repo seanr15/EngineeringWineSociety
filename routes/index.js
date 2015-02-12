@@ -2,22 +2,23 @@ var pg = require('pg');
 
 exports.view = function(req, res){
 
-  var cars={'cars':[]};
+   var allwines={'allwines':[]};
    pg.connect(process.env.DATABASE_URL, function(err, client) {
-   var query = client.query('SELECT * FROM test_tab');
+   var query = client.query('SELECT * FROM AllWines');
     
 
     query.on('row', function(row,result) {
       console.log(JSON.stringify(row));
-		  cars['cars'].push(row);
+		  allwines['allwines'].push(row);
     });
 	  query.on('end',function(result){
 	    console.log(cars);
-    	res.render('index',cars);
+			//render here for data
+    	res.render('index',allwines);
 			
 		  client.end();
 
 	  });					 
   });
-
+  
 };

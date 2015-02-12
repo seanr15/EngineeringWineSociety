@@ -16,6 +16,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var admin_enter_wine = require('./routes/admin_enter_wine');
+var log_all_wine_json = require('./routes/log_all_wine_json');
 // Example route
 // var user = require('./routes/user');
 
@@ -44,6 +45,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/admin_enter_wine', admin_enter_wine.view);
+app.get('/log_all_wine_json',log_all_wine_json.all_wine);
+
 //app.get('/add', add.addFriend);
 // Example route
 // app.get('/users', user.list);

@@ -75,14 +75,14 @@
         <li>Next Meeting on Tuesday, February 10, 2015</li>
       </ul>
 
-      <!--
+      
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      -->
+     
 
       <ul class="nav navbar-nav navbar-right" id="Drop">
         <li class="dropdown">
@@ -171,13 +171,15 @@
   </div>
 	<table>
 	
-	{{#each cars}}
+	{{#each allwines}}
      <tr>
+		  <td><center><img src="{{url}}" alt="Smiley face" height="100" width="100"></center></td>
+		 
 	  	<td><h3><a href="#">{{name}}</a></h3></td>
 			
-		  <td><p>{{variatal}}</p></td>
-		  
-    </tr>
+	  	<td><h3>{{varietal}}</h3></td>
+	  	<td><h3>{{vineyard}}</h3></td>
+		</tr>
 	{{/each}}
  
 	</table>
