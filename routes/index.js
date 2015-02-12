@@ -12,7 +12,7 @@ exports.view = function(req, res){
 		  allwines['allwines'].push(row);
     });
 	  query.on('end',function(result){
-	    console.log(cars);
+	    console.log(allwines);
 			//render here for data
     	res.render('index',allwines);
 			
