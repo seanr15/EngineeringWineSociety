@@ -9,7 +9,7 @@ exports.all_wine = function(req, res){
   console.log(req.query.vineyard);
   pg.connect(process.env.DATABASE_URL, 
 	           function(err, client) {
-               var query = client.query('Insert Into AllWines values($1,$2,$3,$4) RETURNING name',[req.query.wine,req.query.vareital,req.query.vineyard,req.query.url],
+               var query = client.query('Insert Into AllWines values($1,$2,$3,$4) RETURNING name',[req.query.wine,req.query.varietal,req.query.vineyard,req.query.url],
 	                                       function(err,result){
                                            if(err){
                                              console.log(err);

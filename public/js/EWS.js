@@ -53,7 +53,7 @@ function httpGet(winery,varietal)
   console.log(search);
 
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', false );
+    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', true );
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
