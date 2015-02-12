@@ -21,7 +21,7 @@ function parseJSON(wine) {
 
   var i = 0;
 
-  $("#wine_table").append("<tr><th><center>Label</center></th><th><center>Name</center></th><th><center>Varietal</center></th><th><center>Winery</center></th><th><center>Submit</center></th></tr>");
+  $('#wine_table').append('<tr><th><center>Label</center></th><th><center>Name</center></th><th><center>Varietal</center></th><th><center>Winery</center></th><th><center>Submit</center></th></tr>');
   
 	
 								 
