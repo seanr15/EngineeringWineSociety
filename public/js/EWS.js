@@ -1,11 +1,14 @@
 'use strict';
 
 
-function httpGet(theUrl)
+function httpGet(winery,varietal)
 {
     var xmlHttp = null;
+    
+  var search = winery + "+" + varietal;
+  console.log(search);
 
-    console.log(theUrl);
+    var theUrl = "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + search + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e";
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theUrl, false );
     xmlHttp.send( null );
@@ -74,7 +77,7 @@ function changeStuff(e) {
 
   console.log(url);
 
-  var wine = httpGet(url);
+  var wine = httpGet(winery,varietal);
 
   //console.log(wine);
 
