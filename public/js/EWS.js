@@ -1,19 +1,6 @@
 'use strict';
 
 
-function httpGet(winery,varietal)
-{
-    var xmlHttp = null;
-    
-  var search = winery + '+' + varietal;
-  console.log(search);
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', false );
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-
 
 function parseJSON(wine) {
 
@@ -58,6 +45,19 @@ function parseJSON(wine) {
 
 }
 
+function httpGet(winery,varietal)
+{
+    var xmlHttp = null;
+    
+  var search = winery + '+' + varietal;
+  console.log(search);
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 
 
 function changeStuff(e) {
@@ -92,17 +92,16 @@ function initializePage() {
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
 
-  console.log('hola');
-	$('#submitBtn').click(changeStuff);
-	
-}
+ }
 
 
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-        console.log("ready to run");
-	initializePage();
+  console.log("ready to run");
+	$('#submitBtn').click(changeStuff);
+	
+
 
 })
 
