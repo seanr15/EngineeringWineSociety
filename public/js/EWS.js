@@ -1,6 +1,19 @@
 'use strict';
 
 
+function httpGet(winery,varietal)
+{
+    var xmlHttp = null;
+    
+  var search = winery + '+' + varietal;
+  console.log(search);
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 
 function parseJSON(wine) {
 
@@ -35,7 +48,7 @@ function parseJSON(wine) {
 		
 		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form></td></tr>';
 
-    $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select )
+    $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select );
     
   }
 
@@ -45,18 +58,6 @@ function parseJSON(wine) {
 
 }
 
-function httpGet(winery,varietal)
-{
-    var xmlHttp = null;
-    
-  var search = winery + '+' + varietal;
-  console.log(search);
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', true );
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
 
 
 
