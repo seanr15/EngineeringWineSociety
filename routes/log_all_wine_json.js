@@ -24,27 +24,8 @@ exports.all_wine = function(req, res){
     
              });
 
+	res.render('admin_enter_wine');
 
-
-	var allwines={'allwines':[]};
-  pg.connect(process.env.DATABASE_URL, function(err, client) {
-   var query = client.query('SELECT * FROM AllWines');
-    
-
-    query.on('row', function(row,result) {
-      console.log(JSON.stringify(row));
-		  allwines['allwines'].push(row);
-    });
-	  query.on('end',function(result){
-	    console.log(allwines);
-			//render here for data
-    	res.render('index',allwines);
-			
-		  client.end();
-
-	  });					 
-  });					 
-						 
 	
    
 };
