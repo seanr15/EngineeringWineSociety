@@ -74,7 +74,6 @@ function changeStuff(e) {
 
   var url = "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + search + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e";*/
 
-  console.log(url);
 
   var wine = httpGet(winery,varietal);
 
