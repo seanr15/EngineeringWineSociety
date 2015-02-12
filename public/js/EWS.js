@@ -5,11 +5,11 @@ function httpGet(winery,varietal)
 {
     var xmlHttp = null;
     
-  var search = winery + "+" + varietal;
+  var search = winery + '+' + varietal;
   console.log(search);
 
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + winery+"+"+varietal + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e", false );
+    xmlHttp.open( 'GET', 'http://services.wine.com/api/beta/service.svc/json/catalog?search=' + winery+'+'+varietal + '&apikey=2817cb958835ff3537c87ff4cf0e9e4e', false );
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
@@ -35,9 +35,9 @@ function parseJSON(wine) {
 	
 
     var label = '<tr><td><center><img src = ' + obj.Products.List[i].Labels[0].Url + ' width = "100" height = "160"></center></td>';
-    var name = "<td><center>" + obj.Products.List[i].Name + "</center</td>";
-    var varietal = "<td><center>" + obj.Products.List[i].Varietal.Name + "</center></td>";
-    var vineyard = "<td><center>" + obj.Products.List[i].Vineyard.Name + "</center></td>";
+    var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
+    var varietal = "<td><center>" + obj.Products.List[i].Varietal.Name + '</center></td>';
+    var vineyard = '<td><center> + obj.Products.List[i].Vineyard.Name + '</center></td>';
 		var beg_form='<td><form method="get" action="/log_all_wine_json" >'+
 	               '<input type="hidden" name="url" value="'+obj.Products.List[i].Labels[0].Url+'" ></input>'+
 	               '<input type="hidden" name="wine" value="'+obj.Products.List[i].Name+'" ></input>'+
@@ -48,7 +48,7 @@ function parseJSON(wine) {
 		
 		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form></td></tr>';
 
-    $("#wine_table").append(label + name + varietal + vineyard +beg_form+ select )
+    $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select )
     
   }
 
@@ -63,16 +63,16 @@ function parseJSON(wine) {
 function changeStuff(e) {
 
   e.preventDefault();
-  console.log("In changeStuff");
-  var winery = $("#winery").val();
-  var varietal = $("#varietal").val();
+  console.log('In changeStuff');
+  var winery = $('#winery').val();
+  var varietal = $('#varietal').val();
   console.log(winery);
   console.log(varietal);
 
-  var search = winery + "+" + varietal;
+  /*var search = winery + "+" + varietal;
   console.log(search);
 
-  var url = "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + search + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e";
+  var url = "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + search + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e";*/
 
   console.log(url);
 
