@@ -6,7 +6,7 @@
 	<title> Engineering Wine Society</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
   
 
 </head>
@@ -72,9 +72,14 @@
  
   <div class = "space">
 
+
   </div>
 <div class="container-fluid" id="add_wine">
   <h1>Add Wine</h1>
+		{{#each new_wine}}
+		<h3>Added {{wine}} successfully</h3>
+		{{/each}}
+
 </div>
 
 <form>
