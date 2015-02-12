@@ -8,9 +8,8 @@ function httpGet(winery,varietal)
   var search = winery + "+" + varietal;
   console.log(search);
 
-    var theUrl = "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + search + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e";
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.open( "GET", "http://services.wine.com/api/beta/service.svc/json/catalog?search=" + winery+"+"+varietal + "&apikey=2817cb958835ff3537c87ff4cf0e9e4e", false );
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
