@@ -36,8 +36,8 @@ function parseJSON(wine) {
 
     var label = '<tr><td><center><img src = ' + obj.Products.List[i].Labels[0].Url + ' width = "100" height = "160"></center></td>';
     var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
-    var varietal = "<td><center>" + obj.Products.List[i].Varietal.Name + '</center></td>';
-    var vineyard = '<td><center> + obj.Products.List[i].Vineyard.Name + '</center></td>';
+    var varietal = '<td><center>' + obj.Products.List[i].Varietal.Name + '</center></td>';
+    var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center></td>';
 		var beg_form='<td><form method="get" action="/log_all_wine_json" >'+
 	               '<input type="hidden" name="url" value="'+obj.Products.List[i].Labels[0].Url+'" ></input>'+
 	               '<input type="hidden" name="wine" value="'+obj.Products.List[i].Name+'" ></input>'+
@@ -93,8 +93,8 @@ function initializePage() {
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
 
-  console.log("hola");
-	$("#submitBtn").click(changeStuff);
+  console.log('hola');
+	$('#submitBtn').click(changeStuff);
 	
 }
 
