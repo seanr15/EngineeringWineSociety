@@ -80,9 +80,12 @@
 		
 </div>
 
-{{#each new_wine}}
-		  <h3>Added {{wine}} successfully</h3>
-{{/each}}
+ <div class="alert alert-success" role="alert">
+   {{#each new_wine}}
+     <a href="/" class ="alert-link"><h3>Added {{wine}} successfully</h3></a>
+   {{/each}}
+ </div>
+
 
 <form>
   <div class="form-group">
