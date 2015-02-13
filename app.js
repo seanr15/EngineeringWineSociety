@@ -17,7 +17,7 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var admin_enter_wine = require('./routes/admin_enter_wine');
 var log_all_wine_json = require('./routes/log_all_wine_json');
-//var pinot_holder = require('./routes/pinot_holder');
+var pinot_holder = require('./routes/pinot_holder');
 // Example route
 // var user = require('./routes/user');
 
