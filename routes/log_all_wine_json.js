@@ -23,7 +23,7 @@ exports.all_wine = function(req, res){
 
     
              });
-  var new_wine = {'new_wine':[]}
+  var new_wine = {'new_wine':[]};
 	new_wine['new_wine'].push({'wine':req.query.wine});
 	res.render('admin_enter_wine',new_wine);
 
