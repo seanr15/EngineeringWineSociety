@@ -55,10 +55,8 @@ function parseJSON(wine) {
 		
 		var setup = '<script type="text/javascript">' +
 
-		              ' $("#wine_row"+'+i+').click(function(){ '+
-                                   	'var projectID = $(this).closest(".row_form").attr("id");'+
-	                                  'var id = projectID.substr("row_form".length);'+
-		                                'console.log("row click handler running " + id);'+
+		              ' $("#wine_row+'+i+'").click(function(){ '+
+                                   			  'console.log("row click handler running " + '+i+' );'+
 																		
                             '});'+
                   
