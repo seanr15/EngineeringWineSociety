@@ -70,16 +70,20 @@
 
 
  <div class="row">
-
-   <div class= "col-md-4"><center><img src="images/VinoNobile.jpg" alt="Smiley face" height="300" width="300"></center></div>
-   <div class="col-md-8"> <h1><center>Pinot Noir 2012</h1></center></div>
+	{{#each thiswine}}
+   
+   <div class= "col-md-4"><center><img src="{{url}}" alt="Smiley face" height="300" width="300"></center></div>
+   <div class="col-md-8"> <h1><center>{{name}}</h1></center></div>
    <div class= "col-md-4"></div>
-   <div class="col-md-8"> <center><h1>Hitching Post, Buellton</center></h1></div>
+   <div class="col-md-8"> <center><h1>{{varietal}}</h1></center></div>
+
+	 <div class= "col-md-4"></div>
+   <div class="col-md-8"> <center><h1>{{vineyard}}</h1></center></div>
 
    <div class= "col-md-4"></div>
 
     <div class="col-md-8"> <center><h1><div class="rating"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div></h1></center></div>
-   
+   {{/each}}
 
 
 

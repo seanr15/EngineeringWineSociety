@@ -6,7 +6,7 @@ exports.view = function(req, res){
    pg.connect(process.env.DATABASE_URL, function(err, client) {
    var query = client.query('SELECT * FROM AllWines');
     
-    var i = 0;
+    
     query.on('row', function(row,result) {
       console.log(JSON.stringify(row));
 		  allwines['allwines'].push(row);
