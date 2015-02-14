@@ -9,7 +9,7 @@ exports.view = function(req, res){
     var i = 0;
     query.on('row', function(row,result) {
       console.log(JSON.stringify(row));
-		  allwines['allwines'].push(row.push({'id':i++});
+		  allwines['allwines'].push(row.push({'id':i++}));
 			
     });
 	  query.on('end',function(result){
