@@ -146,9 +146,12 @@
       <th><center>Winery</center></th>
       <th><center>Rating</center></th>
 	</tr>
-	
+
+
+
 	{{#each allwines}}
-     <tr id="{{url}}">
+	   
+     <tr id="<script>'{{url}}'.replace(/[^A-Z0-9]+/ig, '_')</script>">
 		  <td><center><a href="/pinot_holder"><img src="{{url}}" alt="Smiley face" height="100" width="100"></a></center></td>
 		 
 	  	<td><center><h5>{{name}}</h5></center></td>
@@ -156,16 +159,18 @@
 	  	<td><center><h5>{{varietal}}</h5></center></td>
 	  	<td><center><h5>{{vineyard}}</h5></center></td>
       <td><center><div class="rating"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div></center>
-			<form method="get" action="/pinot_holder" id="{{name}}">
+			<form method="get" action="/pinot_holder" id="<script>'{{name}}'.replace(/[^A-Z0-9]+/ig, '_')</script>">
 			<input type="hidden" name="wine" value="{{name}}" ></input>
 			<input type="hidden" name="varietal" value="{{varietal}}" ></input>
 			<input type="hidden" name="vineyard" value="{{vineyard}}" ></input>
 			<input type="hidden" name="url" value="{{url}}" ></input>
 		  </form>
 			<script type="text/javascript">
-			  $("#{{url}}").click(function(){
-														console.log("selected form  "+"{{name}}");
-														$("#{{name}}").submit();
+			  var newUrl = '{{url}}'.replace(/[^A-Z0-9]+/ig, '_');
+				var newName = '{{name}}'.replace(/[^A-Z0-9]+/ig, '_');
+			  $('#'+newUrl).click(function(){
+														console.log("selected form  "+ newName);
+														$('#'+newName).submit();
                             
 
 				              });
