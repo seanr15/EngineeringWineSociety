@@ -27,7 +27,7 @@ function parseJSON(wine) {
 
   var i = 0;
 
-  $('#wine_table').append('<tr><th><center>Label</center></th><th><center>Name</center></th><th><center>Varietal</center></th><th><center>Winery</center></th><th><center>Submit</center></th></tr>');
+  $('#wine_table').append('<tr><th><center>Label</center></th><th><center>Name</center></th><th><center>Varietal</center></th><th><center>Winery</center></th></tr>');
   
 	
 								 
@@ -44,7 +44,7 @@ function parseJSON(wine) {
     var label = '<tr id="wine_row'+i+'" ><td><center><img src = ' + obj.Products.List[i].Labels[0].Url + ' width = "100" height = "160"></center></td>';
     var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
     var varietal = '<td><center>' + obj.Products.List[i].Varietal.Name + '</center></td>';
-    var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center></td>';
+    var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center>';
 		var beg_form='<form method="get" action="/log_all_wine_json" id="row_form'+i+'" >'+
 	               '<input type="hidden" name="url" value="'+obj.Products.List[i].Labels[0].Url+'" ></input>'+
 	               '<input type="hidden" name="wine" value="'+obj.Products.List[i].Name+'" ></input>'+
@@ -61,7 +61,7 @@ function parseJSON(wine) {
                             '});'+
                   
 
- 		             '</script></tr>';
+ 		             '</script></td></tr>';
 		
 								 
     
