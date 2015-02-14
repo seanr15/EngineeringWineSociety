@@ -152,7 +152,7 @@
 	{{#each allwines}}
 	   
      <tr id="row{{id}}">
-		  <td><center><a href="/pinot_holder"><img src="{{url}}" alt="Smiley face" height="100" width="100"></a></center></td>
+		  <td><center><img src="{{url}}" alt="Smiley face" height="100" width="100"></center></td>
 		 
 	  	<td><center><h5>{{name}}</h5></center></td>
 			
@@ -161,9 +161,6 @@
       <td><center><div class="rating"><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div></center>
 			<form method="get" action="/pinot_holder" id="form{{id}}">
 			<input type="hidden" name="wine" value="{{name}}" ></input>
-			<input type="hidden" name="varietal" value="{{varietal}}" ></input>
-			<input type="hidden" name="vineyard" value="{{vineyard}}" ></input>
-			<input type="hidden" name="url" value="{{url}}" ></input>
 		  </form>
 			<script type="text/javascript">
 			  $("#row{{id}}").click(function(){
