@@ -14,12 +14,7 @@ function httpGet(winery,varietal)
     return xmlHttp.responseText;
 }
 
-function selectWineRow(){
-
-
-
-}
-
+/*
 function selectWine(){
 
 	 for (i = 0; i < rows.length; i++) {
@@ -29,7 +24,7 @@ function selectWine(){
 
 }
 
-
+*/
 
 function parseJSON(wine) {
 
