@@ -15,7 +15,7 @@ exports.delete_wine = function(req, res){
                                              console.log('row Deleted with name: ' + result.rows[0].name);
                                            }
 															             client.end();
-  	                                       res.get('/',index.view);																					 
+  	                                       res.redirect('/');																					 
 																					 
 													               });
 														 
