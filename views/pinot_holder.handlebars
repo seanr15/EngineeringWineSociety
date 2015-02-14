@@ -101,18 +101,21 @@
 		 
 
    <input type="hidden" name="wine" value="{{name}}" ></input>
-	 <input id='button{{id}}' type="button" name="delete" value="Delete Wine" ></input>
+	 <input id="button{{id}}" type="button" name="delete" value="Delete Wine" ></input>
 
 	 </form>
-	  <script type="text/javascript">
-		  $('#button{{id}}').click( function(){
-                                  if(confirm('Delete this Wine?')){
-                                    $('#form{{id}}').submit();
-			                            }
-                                  else{ alert('Wine Will not be Deleted');}
-														 });
-	    </script>
+	 	<script type="text/javascript">
+			  $("#button{{id}}").click(function(){
+														console.log("selected form  button{{id}} and form{{id}}");
+														
+														if( confirm("Format the hard disk?"))
+														  $("#form{{id}}").submit();
+														else	
+                              alert("Wine will not be deleated");
 
+				              });
+			
+			</script>
    
 
 
