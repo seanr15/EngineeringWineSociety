@@ -91,7 +91,7 @@
  <div class="row">
 	 {{#each thiswine}}
 
-   <form id="form{{id}}">
+   <form id="form{{id}} action"/admin_delete_wine" >
    <input type="hidden" name="wine" value="{{name}}" ></input>
 	 <input type="button" name="delete" value="Delete Wine" onClick="if(confirm('Delete this Wine?'))
     $('#form{{id}}').submit();
