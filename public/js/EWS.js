@@ -65,7 +65,7 @@ function parseJSON(wine) {
 		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form>';
 								 
     
-    $('#wine_table').append(label + name + varietal + vineyard +beg_form++ select + setup );
+    $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select + setup );
 
     
 
