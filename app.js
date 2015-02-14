@@ -46,12 +46,12 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/admin_enter_wine', admin_enter_wine.view);
 app.get('/log_all_wine_json',log_all_wine_json.all_wine);
 app.get('/pinot_holder', pinot_holder.view);
 app.get('/admin_delete_wine',admin_delete_wine.delete_wine);
-app.get('/login', login.view);
+app.get('/', login.view);
 
 //app.get('/add', add.addFriend);
 // Example route
