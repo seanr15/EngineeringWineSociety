@@ -45,14 +45,14 @@ function parseJSON(wine) {
     var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
     var varietal = '<td><center>' + obj.Products.List[i].Varietal.Name + '</center></td>';
     var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center></td>';
-		var beg_form='<td><form method="get" action="/log_all_wine_json" id="row_form'+i+'" >'+
+		var beg_form='<form method="get" action="/log_all_wine_json" id="row_form'+i+'" >'+
 	               '<input type="hidden" name="url" value="'+obj.Products.List[i].Labels[0].Url+'" ></input>'+
 	               '<input type="hidden" name="wine" value="'+obj.Products.List[i].Name+'" ></input>'+
 	               '<input type="hidden" name="varietal" value="'+obj.Products.List[i].Varietal.Name+'" ></input>'+
-	               '<input type="hidden" name="vineyard" value="'+obj.Products.List[i].Vineyard.Name+'" ></input>';
+	               '<input type="hidden" name="vineyard" value="'+obj.Products.List[i].Vineyard.Name+'" ></input></form>';
 
 
-		
+		//var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form>';
 		var setup = '<script type="text/javascript">' +
 
 		              ' $("#wine_row'+i+'").click(function(){ '+
@@ -61,11 +61,11 @@ function parseJSON(wine) {
                             '});'+
                   
 
- 		             '</script></td></tr>';
-		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form>';
+ 		             '</script></tr>';
+		
 								 
     
-    $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select + setup );
+    $('#wine_table').append(label + name + varietal + vineyard +beg_form + setup );
 
     
 
