@@ -56,7 +56,7 @@ function parseJSON(wine) {
 		var setup = '<script type="text/javascript">' +
 
 		              ' $("#wine_row'+i+'").click(function(){ '+
-                                   			  'console.log("row click handler running  "'+i+' );'+
+                                   			  'console.log("row click handler running  '+i+'" );'+
 																		       '$("#row_form'+i+'").submit();'+
                             '});'+
                   
