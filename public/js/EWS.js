@@ -14,17 +14,12 @@ function httpGet(winery,varietal)
     return xmlHttp.responseText;
 }
 
-/*
-function selectWine(){
 
-	 for (i = 0; i < rows.length; i++) {
-     rows[i].onclick = selectWineRow; //call the function like this
-   }
-
+function selectWine(i){
 
 }
 
-*/
+
 
 function parseJSON(wine) {
 
@@ -40,14 +35,13 @@ function parseJSON(wine) {
 								 
   
 	 
-  var table = document.getElementById("#wine_table");
   
   for (i = 0; i < obj.Products.List.length; i++) { 
 
   
 	
 
-    var label = '<tr class="wine_row'+i+'" ><td><center><img src = ' + obj.Products.List[i].Labels[0].Url + ' width = "100" height = "160"></center></td>';
+    var label = '<tr id="wine_row'+i+'" ><td><center><img src = ' + obj.Products.List[i].Labels[0].Url + ' width = "100" height = "160"></center></td>';
     var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
     var varietal = '<td><center>' + obj.Products.List[i].Varietal.Name + '</center></td>';
     var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center></td>';
@@ -63,8 +57,16 @@ function parseJSON(wine) {
 
     $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select );
 
-    var row = table.getElementsById("#wine_row"+i);
-		row.onClick = $('#row_form'+i).submit();
+    $("#wine_row"+i).onClick(i,function(){
+		                               console.log("row click handler running");
+                                 
+																   $('#row_form'+i).submit();
+                            });
+
+
+
+
+
 		
     
   }
