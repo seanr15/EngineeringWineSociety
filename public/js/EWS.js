@@ -61,11 +61,11 @@ function parseJSON(wine) {
                             '});'+
                   
 
- 		             '</script>';
-		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form></td></tr>';
+ 		             '</script></td></tr>';
+		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form>';
 								 
     
-    $('#wine_table').append(label + name + varietal + vineyard +beg_form+setup+ select );
+    $('#wine_table').append(label + name + varietal + vineyard +beg_form++ select + setup );
 
     
 
