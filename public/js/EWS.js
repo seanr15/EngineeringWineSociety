@@ -45,7 +45,7 @@ function parseJSON(wine) {
     var name = '<td><center>' + obj.Products.List[i].Name + '</center</td>';
     var varietal = '<td><center>' + obj.Products.List[i].Varietal.Name + '</center></td>';
     var vineyard = '<td><center>' + obj.Products.List[i].Vineyard.Name + '</center></td>';
-		var beg_form='<td><form method="get" action="/log_all_wine_json" class="row_form" id="'+i+'" >'+
+		var beg_form='<td><form method="get" action="/log_all_wine_json" id="row_form'+i+'" >'+
 	               '<input type="hidden" name="url" value="'+obj.Products.List[i].Labels[0].Url+'" ></input>'+
 	               '<input type="hidden" name="wine" value="'+obj.Products.List[i].Name+'" ></input>'+
 	               '<input type="hidden" name="varietal" value="'+obj.Products.List[i].Varietal.Name+'" ></input>'+
@@ -55,9 +55,9 @@ function parseJSON(wine) {
 		
 		var setup = '<script type="text/javascript">' +
 
-		              ' $("#wine_row+'+i+'").click(function(){ '+
-                                   			  'console.log("row click handler running " + '+i+' );'+
-																		
+		              ' $("#wine_row'+i+'").click(function(){ '+
+                                   			  'console.log("row click handler running  "'+i+' );'+
+																		       '$("#row_form'+i+'").submit();'+
                             '});'+
                   
 
