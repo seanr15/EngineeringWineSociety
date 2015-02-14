@@ -1,3 +1,4 @@
+var pg = require('pg');
 
 exports.view = function(req, res){
 
