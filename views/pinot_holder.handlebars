@@ -99,7 +99,7 @@
       <form id="form{{id}}" method="get" action="/admin_delete_wine" >
 		 
 		 
-
+   
    <input type="hidden" name="wine" value="{{name}}" ></input>
 	 <button class="btn btn-danger" id="button{{id}}" >Delete Wine?</button>
 
@@ -113,6 +113,7 @@
 														}
 														else{	
                               alert("Wine will not be deleated");
+															e.preventDefault();
 														}
 
 				              });
