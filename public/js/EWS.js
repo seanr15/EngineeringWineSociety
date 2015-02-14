@@ -58,7 +58,7 @@ function parseJSON(wine) {
     $('#wine_table').append(label + name + varietal + vineyard +beg_form+ select );
 
     $("#wine_row"+i).click(i,function(){
-		                               console.log("row click handler running");
+		                               console.log("row click handler running" + i);
                                  
 																   $('#row_form'+i).submit();
                             });
