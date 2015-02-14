@@ -17,7 +17,8 @@ exports.view = function(req, res){
 			//render here for data
 			var i = 0;
 			for (var wine_row in allwines['allwines']) {
-        wine_row.push({'id':i++});
+        allwines['allwines'][wine_row].push({'id':i});
+				i = i + 1;
 
       }
     	res.render('index',allwines);
