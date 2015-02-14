@@ -2,7 +2,10 @@ var pg = require('pg');
 
 
 exports.delete_wine = function(req, res){
-  console.log("Wine to delete from database");
+  console.log("Wine to delete from database!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  console.log("Wine to delete from database!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  console.log("Wine to delete from database!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+	
   console.log(req.query.wine);
     pg.connect(process.env.DATABASE_URL, 
 	           function(err, client) {

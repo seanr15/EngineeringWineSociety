@@ -89,15 +89,27 @@
 
  </div>
  <div class="row">
-	 {{#each thiswine}}
+  	 {{#each thiswine}}
+      <form id="form{{id}}" method="get" action="/admin_delete_wine" >
+		 
+		 
 
-   <form id="form{{id}}" action"/admin_delete_wine" >
    <input type="hidden" name="wine" value="{{name}}" ></input>
-	 <input type="button" name="delete" value="Delete Wine" onClick="if(confirm('Delete this Wine?'))
-    $('#form{{id}}').submit();
-else alert('Wine Not Deleted')" ></input>
+	 <input id='button{{id}}' type="button" name="delete" value="Delete Wine" ></input>
 
 	 </form>
+	  <script type="text/javascript">
+		  $('#button{{id}}').click( function(){
+                                  if(confirm('Delete this Wine?')){
+                                    $('#form{{id}}').submit();
+			                            }
+                                  else{ alert('Wine Will not be Deleted');}
+														 });
+	    </script>
+
+   
+
+
 	 {{/each}}
 
 
