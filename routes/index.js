@@ -9,12 +9,17 @@ exports.view = function(req, res){
     var i = 0;
     query.on('row', function(row,result) {
       console.log(JSON.stringify(row));
-		  allwines['allwines'].push(row.push({'id':i++}));
+		  allwines['allwines'].push(row);
 			
     });
 	  query.on('end',function(result){
 	    console.log(allwines);
 			//render here for data
+			var i = 0;
+			for (var wine_row in allwines['allwines']) {
+        wine_row.push({'id':i++});
+
+      }
     	res.render('index',allwines);
 			
 		  client.end();
