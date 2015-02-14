@@ -63,7 +63,7 @@ function parseJSON(wine) {
                             '});'+
                   
 
- 		             '</script>'
+ 		             '</script>';
 		var select = '<center><input type="submit" name="sub" value="Choose Wine" ></input></center></form></td></tr>';
 								 
     
