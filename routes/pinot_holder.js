@@ -21,7 +21,7 @@ exports.view = function(req, res){
 			
     });
 	  query.on('end',function(result){
-	    console.log(allwines);
+	    console.log(thiswine);
 			//render here for data
 			var i = 0;
 			for (var wine_row in thiswine['thiswine']) {
