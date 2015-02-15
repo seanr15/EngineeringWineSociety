@@ -21,6 +21,7 @@ var pinot_holder = require('./routes/pinot_holder');
 var admin_delete_wine = require('./routes/admin_delete_wine');
 var login = require('./routes/login');
 var process_login = require('./routes/process_login');
+var logout = require('./routes/logout');
 // Example route
 // var user = require('./routes/user');
 
@@ -53,6 +54,7 @@ app.get('/log_all_wine_json',log_all_wine_json.all_wine);
 app.get('/pinot_holder', pinot_holder.view);
 app.get('/admin_delete_wine',admin_delete_wine.delete_wine);
 app.post('/process_login',process_login.process);
+app.get('/logout',logout.process_logout);
 app.get('/', login.view);
 
 //app.get('/add', add.addFriend);
