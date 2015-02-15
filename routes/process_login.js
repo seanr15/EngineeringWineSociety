@@ -62,6 +62,7 @@ exports.process = function(req, res){
 		  if(result){
         console.log(JSON.stringify(row));
 		    user['user'].push(row);
+			}
 			else{
 		    client.end();
        
