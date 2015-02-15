@@ -64,11 +64,9 @@ exports.process = function(req, res){
 					
     });
 	  query.on('end',function(err,result){
-	    console.log("the object at 0 is " +user['user'][0]);
-	    console.log(" the array length is "+user['user'].length);
-			
+	    			
 		 
-		  if( err ){
+		  if( user['user'].length == 0 ){
           client.end();
 					res.redirect('/');
          
