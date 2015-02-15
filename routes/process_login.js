@@ -64,15 +64,16 @@ exports.process = function(req, res){
 					
     });
 	  query.on('end',function(err,result){
-		  console.log(" the error "+err);
-			console.log("the Result !! " + result);
-		  if(err){
+	    console.log("the object at 0 is " +user['user'][0]);
+	    console.log(" the array length is "+user['user'].length);
+			
+		 
+		  if( err ){
           client.end();
 					res.redirect('/');
          
 			}
 			else{
-	    console.log(user['user'][0]);
 			//render here for data
 		    bcrypt.compare( req.body.password,user['user'][0]['phash'], 
 			                function(err, result2) {
