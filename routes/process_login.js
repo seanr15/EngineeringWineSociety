@@ -60,23 +60,21 @@ exports.process = function(req, res){
     
     
     query.on('row', function(row,result) {
-		  if(result){
 		    user['user'].push(row);
+					
+    });
+	  query.on('end',function(err,result){
+		  console.log(" the error "+err);
+			console.log("the Result !! " + result);
+		  if(err){
+          client.end();
+					res.redirect('login');
+         
 			}
 			else{
-        
-		    client.end();
-				
-        res.redirect('login');
-				
-
-			}
-			
-    });
-	  query.on('end',function(result){
 	    console.log(user['user'][0]);
 			//render here for data
-		  bcrypt.compare( req.body.password,user['user'][0]['phash'], 
+		    bcrypt.compare( req.body.password,user['user'][0]['phash'], 
 			                function(err, result2) {
        
 			                  if(result2 === true){
@@ -91,7 +89,8 @@ exports.process = function(req, res){
 												
 		                     res.redirect('login');
 		                    }
-			});
+			  });
+			}
 		});					 
   });
 
