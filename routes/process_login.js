@@ -31,7 +31,7 @@ exports.process = function(req, res){
 															                                        }
 															                                        else {
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
-		                                                                      res.redirect('index');
+		                                                                      res.redirect('/');//need to change this 
 															                                            client.end();
 																																					
 																																			}
