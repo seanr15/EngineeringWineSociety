@@ -9,8 +9,8 @@ exports.process = function(req, res){
     
 
 		
-    console.log(req.query.email);
-    console.log(req.query.password);
+    console.log(req.body.user.email);
+    console.log(req.body.user.password);
   
 		res.redirect('index');
 };
