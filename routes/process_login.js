@@ -50,7 +50,7 @@ exports.process = function(req, res){
 
 
 		}
-		else if(req.body.newuser == 'sign_in'){
+		else{
 
 
 		 var user={'user':[]};
