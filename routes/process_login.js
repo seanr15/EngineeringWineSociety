@@ -21,7 +21,7 @@ exports.process = function(req, res){
                                pg.connect(process.env.DATABASE_URL, 
 	                                       function(err, client) {
                                            var query = client.query('Insert Into Users values($1,$2,$3) RETURNING username',
-																				                           [req.body.email,hash,'A'],
+																				                           [req.body.email,hash,'U'],
 	                                                                 function(err,result){
                                                                       if(err){
                                                                         console.log(err);
@@ -79,8 +79,14 @@ exports.process = function(req, res){
 			                  if(result2 === true){
 
 			 	                  client.end();
-			                    
-		                      res.redirect('index');
+													//determine if user is admin
+			                    if(user['user'][0]['role']=='A'){
+		                        res.redirect('index');
+													}
+													else{
+		                        res.redirect('/');
+                           
+													}
 					 
                         }
 			                  else{
