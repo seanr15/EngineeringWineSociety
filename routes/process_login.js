@@ -25,13 +25,17 @@ exports.process = function(req, res){
 	                                                                 function(err,result){
                                                                       if(err){
                                                                         console.log(err);
+															                                           client.end();
+																																				
 															                                        }
 															                                     else {
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
+		                                                                      res.redirect('index');
+															                                            client.end();
+																																					
+																																				 
                                                                      }
-		                                                                  res.redirect('index');
 																																		 
-															                                       client.end();
 													                                         });
 														 
 
@@ -66,11 +70,15 @@ exports.process = function(req, res){
        
 			 if(res === true){
 			 res.redirect('index');
+		  client.end();
+			 
 			   
 
 
 			 }
 			 res.redirect('login');
+		  client.end();
+			 
 			 
 
     
@@ -80,7 +88,6 @@ exports.process = function(req, res){
 		});
 			
 			
-		  client.end();
 
 	  });					 
   });
