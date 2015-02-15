@@ -1,5 +1,7 @@
-var pg = require('pg');
 var bcrypt = require('bcrypt');
+
+var pg = require('pg');
+
 
 
 exports.process = function(req, res){
@@ -9,7 +11,11 @@ exports.process = function(req, res){
 		
     console.log(req.query.username);
     console.log(req.query.pass);
-    console.log(req.query.newuser);
+
+
+		
+
+		
 		
 	 /*	
    var thiswine={'thiswine':[]};
