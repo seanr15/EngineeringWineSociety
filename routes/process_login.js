@@ -1,10 +1,11 @@
-var bcrypt = require('bcrypt');
 
 var pg = require('pg');
 
 
 
 exports.process = function(req, res){
+
+
     console.log('Log in info to look up');
     
 
