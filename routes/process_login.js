@@ -25,16 +25,16 @@ exports.process = function(req, res){
 	                                                                 function(err,result){
                                                                       if(err){
                                                                         console.log(err);
-															                                           client.end();
+		                                                                    res.redirect('login');
+																																				client.end();
 																																				
 															                                        }
-															                                     else {
+															                                        else {
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
 		                                                                      res.redirect('index');
 															                                            client.end();
 																																					
-																																				 
-                                                                     }
+																																			}
 																																		 
 													                                         });
 														 
@@ -53,9 +53,10 @@ exports.process = function(req, res){
 		else{
 
 
-		 var user={'user':[]};
-     pg.connect(process.env.DATABASE_URL, function(err, client) {
-     var query = client.query('SELECT * FROM Users where username=$1',[req.body.email]);
+	var user={'user':[]};
+  pg.connect(process.env.DATABASE_URL, function(err, client) {
+     
+		 var query = client.query('SELECT * FROM Users where username=$1',[req.body.email]);
     
     
     query.on('row', function(row,result) {
@@ -64,9 +65,10 @@ exports.process = function(req, res){
 		    user['user'].push(row);
 			}
 			else{
-		    client.end();
        
         res.redirect('login');
+		    client.end();
+				
 
 			}
 			
@@ -74,32 +76,21 @@ exports.process = function(req, res){
 	  query.on('end',function(result){
 	    console.log(user['user'][0]);
 			//render here for data
-		  bcrypt.compare( req.body.password,user['user'][0]['phash'], function(err, result2) {
+		  bcrypt.compare( req.body.password,user['user'][0]['phash'], 
+			                function(err, result2) {
        
-			 if(result2 === true){
+			                  if(result2 === true){
 			
-			 	  client.end();
-		       res.redirect('index');
-
-			   
-
-
-			 }
-		  client.end();
-		 res.redirect('login');
-			
-			 
-			 
-
-    
-		
-		
-		
-		});
-			
-			
-
-	  });					 
+		                      res.redirect('index');
+			 	                  client.end();
+					 
+                      }
+			                else{
+		                    res.redirect('login');
+		                    client.end();
+		                  }
+			});
+		});					 
   });
 
 		
