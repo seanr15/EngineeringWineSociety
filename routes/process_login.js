@@ -61,13 +61,13 @@ exports.process = function(req, res){
     
     query.on('row', function(row,result) {
 		  if(result){
-        console.log(JSON.stringify(row));
 		    user['user'].push(row);
 			}
 			else{
-       
-        res.redirect('login');
+        
 		    client.end();
+				
+        res.redirect('login');
 				
 
 			}
@@ -80,27 +80,22 @@ exports.process = function(req, res){
 			                function(err, result2) {
        
 			                  if(result2 === true){
-			
-		                      res.redirect('index');
+
 			 	                  client.end();
+			                    
+		                      res.redirect('index');
 					 
-                      }
-			                else{
-		                    res.redirect('login');
-		                    client.end();
-		                  }
+                        }
+			                  else{
+		                     client.end();
+												
+		                     res.redirect('login');
+		                    }
 			});
 		});					 
   });
 
-		
-
-
-
-
-
-
-		}
+	}
 		
   
 		//res.redirect('index');
