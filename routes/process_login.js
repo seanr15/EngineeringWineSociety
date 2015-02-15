@@ -74,9 +74,9 @@ exports.process = function(req, res){
 	  query.on('end',function(result){
 	    console.log(user['user'][0]);
 			//render here for data
-		  bcrypt.compare( req.body.password,user['user'][0]['phash'], function(err, result) {
+		  bcrypt.compare( req.body.password,user['user'][0]['phash'], function(err, result2) {
        
-			 if(result === true){
+			 if(result2 === true){
 			
 			 	  client.end();
 		       res.redirect('index');
