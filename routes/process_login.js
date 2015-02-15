@@ -10,8 +10,8 @@ exports.process = function(req, res){
     
 
 		
-    console.log(req.query.username);
-    console.log(req.query.pass);
+    console.log(req.query.email);
+    console.log(req.query.password);
 
 
 		
