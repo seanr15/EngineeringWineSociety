@@ -25,7 +25,7 @@ exports.process = function(req, res){
 	                                                                 function(err,result){
                                                                       if(err){
                                                                         console.log(err);
-		                                                                    res.redirect('login');
+		                                                                    res.redirect('/');
 																																				client.end();
 																																				
 															                                        }
@@ -68,7 +68,7 @@ exports.process = function(req, res){
 			console.log("the Result !! " + result);
 		  if(err){
           client.end();
-					res.redirect('login');
+					res.redirect('/');
          
 			}
 			else{
@@ -87,7 +87,7 @@ exports.process = function(req, res){
 			                  else{
 		                     client.end();
 												
-		                     res.redirect('login');
+		                     res.redirect('/');
 		                    }
 			  });
 			}
