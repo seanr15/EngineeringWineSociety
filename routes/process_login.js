@@ -50,7 +50,7 @@ exports.process = function(req, res){
 
 
 		}
-		else{
+		else if(req.body.newuser == 'sign_in'){
 
 
 		 var user={'user':[]};
@@ -59,8 +59,15 @@ exports.process = function(req, res){
     
     
     query.on('row', function(row,result) {
-      console.log(JSON.stringify(row));
-		  user['user'].push(row);
+		  if(result){
+        console.log(JSON.stringify(row));
+		    user['user'].push(row);
+			else{
+		    client.end();
+       
+        res.redirect('login');
+
+			}
 			
     });
 	  query.on('end',function(result){
@@ -69,15 +76,17 @@ exports.process = function(req, res){
 		  bcrypt.compare( req.body.password,user['user'][0]['phash'], function(err, res) {
        
 			 if(res === true){
-			 res.redirect('index');
-		  client.end();
-			 
+			
+			 	  client.end();
+		       res.redirect('index');
+
 			   
 
 
 			 }
-			 res.redirect('login');
 		  client.end();
+		 res.redirect('login');
+			
 			 
 			 
 
