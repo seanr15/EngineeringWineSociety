@@ -92,7 +92,7 @@ exports.process = function(req, res){
 			                  else{
 		                     client.end();
 												
-		                     res.redirect('/');
+		                     res.redirect('/user_index');
 		                    }
 			  });
 			}
