@@ -56,7 +56,7 @@ app.get('/log_all_wine_json',log_all_wine_json.all_wine);
 app.get('/pinot_holder', pinot_holder.view);
 app.get('/admin_delete_wine',admin_delete_wine.delete_wine);
 app.post('/process_login',process_login.process);
-app.post('/manual_add', manual_add.add);
+app.get('/manual_add', manual_add.add);
 app.get('/logout',logout.process_logout);
 app.get('/user_index', user_index.view);
 app.get('/', login.view);
