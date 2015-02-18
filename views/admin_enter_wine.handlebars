@@ -109,13 +109,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">Add Wine</h4>
       </div>
-       <form id="add_wine" action="/manual_add" method="post">
-			
       <div class="modal-body">
-        <!--<form id="add_wine" action="/manual_add" method="post">-->
+        <form id="add_wine" action="/manual_add" method="post">
 	        <div class="form-group">
             <label for="recipient-name" class="control-label" name="name">Name</label>
-            <input type="text" class="form-control" id="name-name" name="name">
+            <input type="text" class="form-control" id="name" name="name">
           </div>
 
           <div class="form-group">
@@ -126,14 +124,12 @@
             <label for="recipient-name" class="control-label" name="varietal">Varietal</label>
             <input type="text" class="form-control" id="varietal" name="varietal">
           </div>
-       <!--</form>-->
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="add" >Add</button>
       </div>
-        </form>
-			
     </div>
   </div>
 </div>

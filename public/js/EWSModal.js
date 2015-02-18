@@ -23,13 +23,13 @@ $(document).ready(function() {
      });*/
 		 /////
 
-		 $('#add').click(function(){
+		 /*$('#add').click(function(){
          var data = $.parseJSON($(this).attr('data-button'));
          console.log('selected modal form');
          console.log(data);
 				 
 				 
-     });
+     });*/
 
 
 	
