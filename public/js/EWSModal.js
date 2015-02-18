@@ -4,13 +4,16 @@ $(document).ready(function() {
   console.log("ready to run modal");
   $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget); // Button that triggered the modal
-  var recipient = button.data('whatever'); // Extract info from data-* attributes
+  var name1 = button.data('name'); // Extract info from data-* attributes
+	var winery = button.data('winery');
+	var varietal = button.data('varietal');
+	console.log("try 1" + name1)
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  //var modal = $(this);
+  var modal = $(this);
   modal.find('.modal-title').text('Add Wine');
-  var name =  modal.find('.modal-body input').val(name);
-	console.log(name);
+  var name2 =  modal.find('.modal-body input').val(name);
+	console.log("try 2" + name2);
 
 	   
 		 ///adding click to primary button '#add'
