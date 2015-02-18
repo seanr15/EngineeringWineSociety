@@ -24,6 +24,7 @@ var process_login = require('./routes/process_login');
 var logout = require('./routes/logout');
 var manual_add = require('./routes/manual_add');
 var user_index = require('./routes/user_index');
+var admin_sign_up = require('./routes/admin_sign_up');
 // Example route
 // var user = require('./routes/user');
 
@@ -59,6 +60,7 @@ app.post('/process_login',process_login.process);
 app.post('/manual_add', manual_add.add);
 app.get('/logout',logout.process_logout);
 app.get('/user_index', user_index.view);
+app.get('/admin_sign_up', admin_sign_up.view)
 app.get('/', login.view);
 
 
