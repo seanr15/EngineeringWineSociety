@@ -84,16 +84,13 @@ exports.process = function(req, res){
 		                        res.redirect('index');
 													}
 													else{
-		                        res.redirect('/');
-                           
+		                        res.redirect('/user_index');
 													}
-					 
-                        }
+					              }
 			                  else{
-		                     client.end();
-												
-		                     res.redirect('/user_index');
-		                    }
+		                      client.end();
+		                      res.redirect('/');
+												}
 			  });
 			}
 		});					 
