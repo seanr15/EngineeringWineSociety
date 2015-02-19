@@ -52,10 +52,29 @@ exports.process = function(req, res){
 													//determine if user is admin
 			                    if(user['user'][0]['role']=='A'){
 		                        res.redirect('index');
-													}
-													else{
-		                        res.redirect('/user_index');
-													}
+												}
+												else{
+													  client.end();
+
+		                         var allwines={'allwines':[]};
+
+                            var query2 = client.query2('SELECT * FROM userratings where username=$1',[req.body.email]);
+                            query2.on('row', function(row,result) {
+		                          allwines['allwines'].push(row);
+					
+                            });
+	                           query2.on('end',function(err,result){
+	    			                  
+		                           if( result.rows.length == 0 ){
+                                 client.end();
+					                       res.render('user_index');
+         
+			                         }
+														   else{
+														      client.end();
+                                 res.render('user_index',allwines);
+															}
+													 });
 					              }
 			                  else{
 		                      client.end();
