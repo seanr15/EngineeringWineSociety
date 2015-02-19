@@ -1,6 +1,6 @@
 var pg = require('pg');
 
-exports.view = function(req, res){
+exports.posted_wines = function(req, res){
 
    var allwines={'allwines':[]};
    pg.connect(process.env.DATABASE_URL, function(err, client) {
