@@ -98,6 +98,8 @@
  </div>
  <div class="row">
   	 {{#each thiswine}}
+    <div class="col-md-4">.col-md-4</div>
+
       <form id="form{{id}}" method="get" action="/admin_delete_wine" >
 		 
 		 
@@ -121,6 +123,35 @@
 				              });
 			
 			</script>
+			</div>
+     <div class="col-md-4">.col-md-4</div>
+		 <form id="form2{{id}}" method="post" action="/admin_allow_rating" >
+		 
+		 
+   
+   <input type="hidden" name="wine" value="{{name}}" ></input>
+	 <button class="btn btn-danger" id="button2{{id}}" >Delete Wine?</button>
+
+	 </form>
+	 	<script type="text/javascript">
+			  $("#button2{{id}}").click(function(e){
+														console.log("selected form  button{{id}} and form{{id}}");
+														
+														if( confirm("Are you sure you want to delete\n{{name}}\nFrom the AllWines")){
+														  $("#form2{{id}}").submit();
+														}
+														else{	
+                              alert("Wine will not be deleated");
+															e.preventDefault();
+														}
+
+				              });
+			
+			</script>
+
+		</div>
+		<div class="col-md-4">.col-md-4</div>
+		</div>
    
 
 
