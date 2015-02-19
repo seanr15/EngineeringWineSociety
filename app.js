@@ -31,6 +31,8 @@ var admin_post_wine = require('./routes/admin_post_wine');
 var admin_sign_up_check = require('./routes/admin_sign_up_check');
 
 var user_all_wines=require('./routes/user_all_wines');
+var posted_wines=require('./routes/posted_wines');
+
 
 
 // Example route
@@ -74,8 +76,8 @@ app.get('/admin_sign_up', admin_sign_up.view);
 app.post('/admin_sign_up_check',admin_sign_up_check.check);
 app.post('/admin_post_wine',admin_post_wine.post_wine);
 
-app.get('/user_all_wines',user_all_wines.view);
-
+app.get( '/user_all_wines',user_all_wines.view );
+app.get( '/posted_wines',posted_wines.posted_wines );
 
 app.get('/', login.view);
 
