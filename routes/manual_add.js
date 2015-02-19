@@ -5,13 +5,13 @@ exports.add = function(req, res){
   
   console.log("New Wine Data to store in database");
   //console.log(req.query.url);
-  console.log(req.body.name);
-  console.log(req.body.winery);
-  console.log(req.body.varietal);
-  /*
+  console.log(req.query.name);
+  console.log(req.query.winery);
+  console.log(req.query.varietal);
+  
   pg.connect(process.env.DATABASE_URL, 
 	           function(err, client) {
-               var query = client.query('Insert Into AllWines values($1,$2,$3,$4) RETURNING name',[req.query.wine,req.query.varietal,req.query.vineyard,req.query.url],
+               var query = client.query('Insert Into AllWines values($1,$2,$3,$4) RETURNING name',[req.query.name,req.query.varietal,req.query.vineyard,'/images/default0.jpg'],
 	                                       function(err,result){
                                            if(err){
                                              console.log(err);
@@ -26,11 +26,7 @@ exports.add = function(req, res){
     
              });
   var new_wine = {'new_wine':[]};
-	new_wine['new_wine'].push({'wine':req.query.wine});
+	new_wine['new_wine'].push({'wine':req.query.name});
 	res.render('admin_enter_wine',new_wine);
 
-	
-*/
-  res.redirect('admin_enter_wine');
-   
 };
