@@ -98,8 +98,7 @@
  </div>
  <div class="row">
   	 {{#each thiswine}}
-    <div class="col-md-4">
-
+		 <div class= "col-md-4">
       <form id="form{{id}}" method="get" action="/admin_delete_wine" >
 		 
 		 
@@ -124,13 +123,13 @@
 			
 			</script>
 			</div>
-     <div class="col-md-4">
-		 <form id="form2{{id}}" method="post" action="/admin_allow_rating" >
+			<div class= "col-md-4">
+      <form id="form2{{id}}" method="post" action="" >
 		 
 		 
    
    <input type="hidden" name="wine" value="{{name}}" ></input>
-	 <button class="btn btn-danger" id="button2{{id}}" >Delete Wine?</button>
+	 <button class="btn btn-danger" id="button2{{id}}" >Add For Rating?</button>
 
 	 </form>
 	 	<script type="text/javascript">
@@ -141,38 +140,15 @@
 														  $("#form2{{id}}").submit();
 														}
 														else{	
-                              alert("Wine will not be deleated");
+                              alert("Wine will not be Rated");
 															e.preventDefault();
 														}
 
 				              });
 			
 			</script>
-
-		</div>
-		<div class="col-md-4">
-		 <form id="form3{{id}}" >
-		 
-		 
-   
-   <input type="hidden" name="wine" value="{{name}}" ></input>
-	 <button class="btn btn-danger" id="button3{{id}}" >Edit Image?</button>
-
-	 </form>
-	 	<script type="text/javascript">
-			  $("#button3{{id}}").click(function(e){
-														console.log("selected form  button3{{id}} and form3{{id}}");
-												    alert("Development in process");
-															e.preventDefault();
-														
-                            
-				              });
-			
-			</script>
-		
-		
-		</div>
-   
+			</div>
+   <div class= "col-md-4"></div>
 
 
 	 {{/each}}
