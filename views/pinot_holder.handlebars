@@ -129,7 +129,7 @@
 		 
    
    <input type="hidden" name="wine" value="{{name}}" ></input>
-	 <button class="btn btn-danger" id="button2{{id}}" >Add For Rating?</button>
+	 <button class="btn btn-primary" id="button2{{id}}" >Add For Rating?</button>
 
 	 </form>
 	 	<script type="text/javascript">
@@ -148,7 +148,32 @@
 			
 			</script>
 			</div>
-   <div class= "col-md-4"></div>
+   <div class= "col-md-4">
+	  <form id="form3{{id}}" method="post" action="" >
+		 
+		 
+   
+   <input type="hidden" name="wine" value="{{name}}" ></input>
+	 <button class="btn btn-info" id="button3{{id}}" >Change Image</button>
+
+	 </form>
+	 	<script type="text/javascript">
+			  $("#button3{{id}}").click(function(e){
+														console.log("selected form  button3{{id}} and form3{{id}}");
+														
+														
+                              alert("Development In Progress");
+															e.preventDefault();
+														
+
+				              });
+			
+			</script>
+	 
+	 
+	 
+	 
+	 </div>
 
 
 	 {{/each}}
