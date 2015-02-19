@@ -14,43 +14,13 @@ exports.process = function(req, res){
     console.log(req.body.email);
     console.log(req.body.password);
     console.log(req.body.newuser);
-		if( req.body.newuser == 'sign_up' ){
-      bcrypt.genSalt(10, function(err, salt) {
-                  bcrypt.hash(req.body.password, salt, function(err, hash) {
-                        // Store hash in your password DB.
-                               pg.connect(process.env.DATABASE_URL, 
-	                                       function(err, client) {
-                                           var query = client.query('Insert Into Users values($1,$2,$3) RETURNING username',
-																				                           [req.body.email,hash,'U'],
-	                                                                 function(err,result){
-                                                                      if(err){
-                                                                        console.log(err);
-		                                                                    res.redirect('/');
-																																				client.end();
-																																				
-															                                        }
-															                                        else {
-                                                                         console.log('row inserted with id: ' + result.rows[0].username);
-		                                                                      res.redirect('/');//need to change this 
-															                                            client.end();
-																																					
-																																			}
-																																		 
-													                                         });
-														 
-
-    
-                              });
-                         
-
-
-                 });
-      });
+//		if( req.body.newuser == 'sign_up' ){
+      
 
 
 
-		}
-		else{
+//		}
+//		else{
 
 
 	var user={'user':[]};
@@ -96,7 +66,7 @@ exports.process = function(req, res){
 		});					 
   });
 
-	}
+//	}
 		
   
 		//res.redirect('index');
