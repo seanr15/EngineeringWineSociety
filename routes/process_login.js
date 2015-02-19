@@ -54,7 +54,10 @@ exports.process = function(req, res){
 		                        res.redirect('index');
 													}
 													else{
-                            console.log("Valid User!");
+                            console.log("Valid User! "+req.session.user);
+														req.session.user=user['user'][0]['username'];
+                            console.log("Valid User! "+req.session.user);
+														
 														
 														var allwines={'allwines':[]};
                             var query2 = client.query('SELECT * FROM userratings where username=$1',[user['user'][0]['username']],
