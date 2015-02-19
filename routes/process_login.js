@@ -13,7 +13,6 @@ exports.process = function(req, res){
 		
     console.log(req.body.email);
     console.log(req.body.password);
-    console.log(req.body.newuser);
 //		if( req.body.newuser == 'sign_up' ){
       
 
@@ -75,7 +74,7 @@ exports.process = function(req, res){
 
 	 var allwines={'allwines':[]};
    pg.connect(process.env.DATABASE_URL, function(err, client) {
-   var query = client.query('SELECT * FROM userratings where username=$1'[req.body.email]);
+   var query = client.query('SELECT * FROM userratings where username=$1',[req.body.email]);
     
     
     query.on('row', function(row,result) {
