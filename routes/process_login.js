@@ -65,7 +65,15 @@ exports.process = function(req, res){
 					                        res.redirect('/');
 																}
 																else{
-                                allwines['allwines']=result.rows;
+																
+                               allwines['allwines']=result.rows;
+															 var i = 0;
+															 console.log('All wines !!!!!!!!!' + allwines);
+			                         for (var wine_row in allwines['allwines']) {
+                                 allwines['allwines'][wine_row]['id']=i;
+				                         i = i + 1;
+
+                                }
 																client.end();
 													      
                            	    res.render('user_index',allwines);
