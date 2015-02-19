@@ -98,7 +98,7 @@
  </div>
  <div class="row">
   	 {{#each thiswine}}
-    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">
 
       <form id="form{{id}}" method="get" action="/admin_delete_wine" >
 		 
@@ -124,7 +124,7 @@
 			
 			</script>
 			</div>
-     <div class="col-md-4">.col-md-4</div>
+     <div class="col-md-4">
 		 <form id="form2{{id}}" method="post" action="/admin_allow_rating" >
 		 
 		 
@@ -135,9 +135,9 @@
 	 </form>
 	 	<script type="text/javascript">
 			  $("#button2{{id}}").click(function(e){
-														console.log("selected form  button{{id}} and form{{id}}");
+														console.log("selected form  button2{{id}} and form2{{id}}");
 														
-														if( confirm("Are you sure you want to delete\n{{name}}\nFrom the AllWines")){
+														if( confirm("Are you sure you want to allow rating for\n{{name}}")){
 														  $("#form2{{id}}").submit();
 														}
 														else{	
@@ -150,7 +150,27 @@
 			</script>
 
 		</div>
-		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4">
+		 <form id="form3{{id}}" >
+		 
+		 
+   
+   <input type="hidden" name="wine" value="{{name}}" ></input>
+	 <button class="btn btn-danger" id="button3{{id}}" >Edit Image?</button>
+
+	 </form>
+	 	<script type="text/javascript">
+			  $("#button3{{id}}").click(function(e){
+														console.log("selected form  button3{{id}} and form3{{id}}");
+												    alert("Development in process");
+															e.preventDefault();
+														
+                            
+				              });
+			
+			</script>
+		
+		
 		</div>
    
 
