@@ -52,8 +52,8 @@ exports.process = function(req, res){
 													//determine if user is admin
 			                    if(user['user'][0]['role']=='A'){
 		                        res.redirect('index');
-												}
-												else{
+												  }
+												  else{
 													  client.end();
 
 		                         var allwines={'allwines':[]};
@@ -66,20 +66,25 @@ exports.process = function(req, res){
 	                           query2.on('end',function(err,result){
 	    			                  
 		                           if( result.rows.length == 0 ){
+															    console.log('NO rated Wines !!!!!!!!!!!');
+															   
                                  client.end();
 					                       res.render('user_index');
          
 			                         }
 														   else{
+															    console.log('All rated Wines !!!!!!!!!!!');
 														      client.end();
                                  res.render('user_index',allwines);
 															}
 													 });
 					              }
-			                  else{
+			                  
+									  }
+										else{
 		                      client.end();
 		                      res.redirect('/');
-												}
+										}
 			  });
 			}
 		});					 
