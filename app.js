@@ -25,6 +25,12 @@ var logout = require('./routes/logout');
 var manual_add = require('./routes/manual_add');
 var user_index = require('./routes/user_index');
 var admin_sign_up = require('./routes/admin_sign_up');
+
+var admin_sign_up_check = require('./routes/admin_sign_up_check');
+var admin_sign_up_success = require('./routes/admin_sign_up_success');
+var admin_sign_up_fail = require('./routes/admin_sign_up_fail');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -60,7 +66,13 @@ app.post('/process_login',process_login.process);
 app.get('/manual_add', manual_add.add);
 app.get('/logout',logout.process_logout);
 app.get('/user_index', user_index.view);
-app.get('/admin_sign_up', admin_sign_up.view)
+app.get('/admin_sign_up', admin_sign_up.view);
+
+app.post('/admin_sign_up_check',admin_sign_up_check.check);
+app.get('/admin_sign_up_success',admin_sign_up_success.view);
+app.get('/admin_sign_up_fail',admin_sign_up_fail.view);
+
+
 app.get('/', login.view);
 
 
