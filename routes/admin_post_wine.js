@@ -13,6 +13,8 @@ exports.post_wine = function(req, res){
 	                                       function(err,result){
                                            if(err){
                                              console.log(err);
+  	                                         res.redirect('index');
+																						 
 															             }
 															             else {
                                              console.log('row inserted with id: ' + result.rows[0].name);
