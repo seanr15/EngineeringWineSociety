@@ -88,6 +88,22 @@
      <center><h3>Added {{wine}} successfully</h3></center>
    {{/each}}
  </div>
+
+
+<form>
+  <div class="form-group">
+    <label for="enterWinery">Enter Winery</label>
+    <input type="winery" class="form-control" id="winery" placeholder="Winery">
+  </div>
+  <div class="form-group">
+    <label for="enterVarietal">Enter Varietal (If applicable)</label>
+    <input type="varietal" class="form-control" id="varietal" placeholder="Varietal">
+  </div>
+	
+  <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
+</form>
+
+
  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -123,19 +139,6 @@
 </div>
 
 
-
-<form>
-  <div class="form-group">
-    <label for="enterWinery">Enter Winery</label>
-    <input type="winery" class="form-control" id="winery" placeholder="Winery">
-  </div>
-  <div class="form-group">
-    <label for="enterVarietal">Enter Varietal (If applicable)</label>
-    <input type="varietal" class="form-control" id="varietal" placeholder="Varietal">
-  </div>
-	
-  <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
-</form>
 
  <hr>
    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Enter Wine Manually</button>

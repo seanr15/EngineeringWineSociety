@@ -91,8 +91,8 @@ function changeStuff(e) {
   console.log('In changeStuff');
   var winery = $('#winery').val();
   var varietal = $('#varietal').val();
-  console.log(winery);
-  console.log(varietal);
+  console.log('winery '+winery);
+  console.log('varietal '+varietal);
 
   /*var search = winery + "+" + varietal;
   console.log(search);
@@ -125,7 +125,11 @@ $(document).ready(function() {
   console.log("ready to run");
 	$('#submitBtn').click(changeStuff);
 
-  $('#exampleModal').on('show.bs.modal', function (event) {
+ 	
+
+
+});
+$('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget); // Button that triggered the modal
   //var name1 = button.data('name'); // Extract info from data-* attributes
 	//var winery = button.data('winery');
@@ -156,11 +160,8 @@ $(document).ready(function() {
 
 
 	
-  });
-	
+ s});
 
-
-});
 
 
 /*$('#exampleModal').on('show.bs.modal', function (event) {
