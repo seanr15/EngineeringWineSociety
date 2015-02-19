@@ -29,11 +29,11 @@ exports.check = function(req, res){
 															                                        }
 															                                        else {
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
-																																				  var name=result.rows[0].firstname;
-																																					var lname=result.rows[0].lastname;
+																																				  var name=result.rows[0].username;
+																																					//var lname=result.rows[0].lastname;
 															                                            client.end();
 																																				 
-		                                                                      res.render('admin_sign_up',{'status':[{'li_status':name+' '+lname +' added Successfully'}]} ); 
+		                                                                      res.render('admin_sign_up',{'status':[{'li_status':name +' added Successfully'}]} ); 
 																																					
 																																			}
 																																		 
