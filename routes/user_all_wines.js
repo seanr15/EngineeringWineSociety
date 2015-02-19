@@ -5,8 +5,8 @@ exports.view = function(req, res){
    var allwines={'allwines':[]};
 	 console.log("current user");
 	 console.log(req.query.name);
-   /*pg.connect(process.env.DATABASE_URL, function(err, client) {
-   var query = client.query('SELECT * FROM userrattings where username=$1',[req.body.name]);
+   pg.connect(process.env.DATABASE_URL, function(err, client) {
+   var query = client.query('SELECT * FROM allwines');
     
     
     query.on('row', function(row,result) {
@@ -28,7 +28,7 @@ exports.view = function(req, res){
 		  client.end();
 
 	  });					 
-  });*/
+  });
 	res.render("user_all_wines",allwines);
   
 };

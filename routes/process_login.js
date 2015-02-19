@@ -59,7 +59,7 @@ exports.process = function(req, res){
 														
 														
 														var allwines={'allwines':[]};
-                            var query2 = client.query('SELECT * FROM userratings where username=$1',[user['user'][0]['username']],
+                            var query2 = client.query('SELECT * FROM Allwines',
 														  function(err,result){
 														  
 															  if(result.rows.length==0){

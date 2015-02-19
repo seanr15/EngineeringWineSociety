@@ -87,19 +87,12 @@
      
 
       <ul class="nav navbar-nav navbar-right" id="Drop">
-        <li>				
-				<form method="get" action="/user_all_wines" >
-           <input name="name" value="{{username}}" type="hidden"></input>
-			  	<a type="submit" >All EWS Wines</a>
-
-				</form>
-				</li>
         <li><a href="/posted_wines">Wines Available for Rateing</a></li>
 				
 			
         <li class="dropdown">
 				  {{#each allwines}}
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{username}}<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USER<span class="caret"></span></a>
 					{{/each}}
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Settings</a></li>
