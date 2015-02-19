@@ -30,7 +30,7 @@ var admin_post_wine = require('./routes/admin_post_wine');
 
 var admin_sign_up_check = require('./routes/admin_sign_up_check');
 
-var session = require('client-sessions');
+
 
 // Example route
 // var user = require('./routes/user');
@@ -51,6 +51,7 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {

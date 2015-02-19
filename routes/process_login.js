@@ -54,7 +54,6 @@ exports.process = function(req, res){
 		                        res.redirect('index');
 													}
 													else{
-                            console.log("Valid User! "+req.session.user);
 														req.session.user=user['user'][0]['username'];
                             console.log("Valid User! "+req.session.user);
 														
