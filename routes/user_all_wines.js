@@ -3,8 +3,10 @@ var pg = require('pg');
 exports.view = function(req, res){
 
    var allwines={'allwines':[]};
+	 console.log("current user");
+	 console.log(req.query.name);
    /*pg.connect(process.env.DATABASE_URL, function(err, client) {
-   var query = client.query('SELECT * FROM userrattings where username=$1',[req.query.name]);
+   var query = client.query('SELECT * FROM userrattings where username=$1',[req.body.name]);
     
     
     query.on('row', function(row,result) {
@@ -20,12 +22,13 @@ exports.view = function(req, res){
         allwines['allwines'][wine_row]['id']=i;
 				i = i + 1;
 
-      }*/
+      }
     	res.render('user_index',allwines);
 			
-		  //client.end();
+		  client.end();
 
-	 // });					 
-//  });
+	  });					 
+  });*/
+	res.render("user_all_wines",allwines);
   
 };
