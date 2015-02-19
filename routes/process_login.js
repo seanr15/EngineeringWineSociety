@@ -58,7 +58,7 @@ exports.process = function(req, res){
 
 		                         var allwines={'allwines':[]};
 
-                            var query2 = client.query2('SELECT * FROM userratings where username=$1',[req.body.email]);
+                            var query2 = client.query('SELECT * FROM userratings where username=$1',[req.body.email]);
                             query2.on('row', function(row,result) {
 		                          allwines['allwines'].push(row);
 					
