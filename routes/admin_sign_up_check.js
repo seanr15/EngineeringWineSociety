@@ -13,6 +13,10 @@ exports.check = function(req, res){
                         // Store hash in your password DB.
                                pg.connect(process.env.DATABASE_URL, 
 	                                       function(err, client) {
+																				   if(err){
+                                               res.render('admin_sign_up',{'status':[{'li_status':err.message}]});
+																					 }
+																					 else{
                                            var query = client.query('Insert Into Users values($1,$2,$3,$4,$5) RETURNING username',
 																				                           [req.body.email,hash,'U',req.body.firstname,req.body.lastname],
 	                                                                 function(err,result){
@@ -34,7 +38,7 @@ exports.check = function(req, res){
 													                                         });
 														 
 
-    
+                                         }
                               });
                          
 
