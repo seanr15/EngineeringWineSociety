@@ -54,7 +54,6 @@ exports.process = function(req, res){
 		                        res.redirect('index');
 												  }
 												  else{
-													  client.end();
 
 		                         var allwines={'allwines':[]};
 
