@@ -3,7 +3,8 @@ var pg = require('pg');
 exports.add = function(req, res){
 
   
-  console.log("New Wine Data to store in database");
+  
+	console.log("New Wine Data to store in database");
   //console.log(req.query.url);
   console.log(req.query.name);
   console.log(req.query.winery);
@@ -17,7 +18,7 @@ exports.add = function(req, res){
                                              console.log(err);
 															             }
 															             else {
-                                             console.log('row inserted with id: ' + result.rows[0].name);
+                                             console.log('row inserted with ' + result.rows[0].name);
                                            }
 															             client.end();
 													               });
