@@ -1,3 +1,6 @@
+var pg = require('pg');
+var bcrypt = require('bcrypt');
+
 exports.check = function(req, res){
     console.log('new user to add to table'); 
     console.log(req.body.firstname);     
