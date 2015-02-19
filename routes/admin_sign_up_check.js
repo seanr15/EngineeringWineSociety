@@ -31,7 +31,7 @@ exports.check = function(req, res){
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
 															                                            client.end();
 																																				 
-		                                                                      res.render('admin_sign_up',{'status':[{'li_status':'added Successfully'}]} ); 
+		                                                                      res.render('admin_sign_up',{'status':[{'li_status':result.rows[0].firstname+' '+result.rows[0].lastname +' added Successfully'}]} ); 
 																																					
 																																			}
 																																		 
