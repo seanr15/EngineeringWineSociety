@@ -5,5 +5,5 @@ exports.check = function(req, res){
     console.log(req.body.email);     
     console.log(req.body.password);   
 		
-    res.redirect('admin_sign_up_success');
+    res.render('admin_sign_up',{'status':[{'li_status':'Successful'}]});
 };
