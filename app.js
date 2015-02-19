@@ -25,6 +25,8 @@ var logout = require('./routes/logout');
 var manual_add = require('./routes/manual_add');
 var user_index = require('./routes/user_index');
 var admin_sign_up = require('./routes/admin_sign_up');
+var admin_post_wine = require('./routes/admin_post_wine');
+
 
 var admin_sign_up_check = require('./routes/admin_sign_up_check');
 
@@ -67,6 +69,8 @@ app.get('/user_index', user_index.view);
 app.get('/admin_sign_up', admin_sign_up.view);
 
 app.post('/admin_sign_up_check',admin_sign_up_check.check);
+app.post('/admin_post_wine',admin_post_wine.post_wine);
+
 
 
 app.get('/', login.view);
