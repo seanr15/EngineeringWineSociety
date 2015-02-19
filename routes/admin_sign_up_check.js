@@ -20,14 +20,14 @@ exports.check = function(req, res){
                                                                         console.log(err);
 																																				client.end();
 																																				
-		                                                                    res.render('/admin_sign_up',{'status':[{'li_status':err.message}]});
+		                                                                    res.render('admin_sign_up',{'status':[{'li_status':err.message}]});
 																																				
 															                                        }
 															                                        else {
                                                                          console.log('row inserted with id: ' + result.rows[0].username);
 															                                            client.end();
 																																				 
-		                                                                      res.render('/admin_sign_up',{'status':[{'li_status':result.rows[0].username +' added Successfully'}]} ); 
+		                                                                      res.render('admin_sign_up',{'status':[{'li_status':'added Successfully'}]} ); 
 																																					
 																																			}
 																																		 
@@ -42,5 +42,5 @@ exports.check = function(req, res){
                  });
       });
 		
-    //res.render('admin_sign_up',{'status':[{'li_status':'Successful'}]});
+    res.render('admin_sign_up',{'status':[{'li_status':'Fail'}]});
 };

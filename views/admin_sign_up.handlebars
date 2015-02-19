@@ -83,12 +83,12 @@
 	
 		
 </div>
-
+ 
+ <div>
    {{#each status}}
-     <center><h3>{{li_status}} </h3></center>
+     <center><h3>Added {{li_status}}</h3></center>
    {{/each}}
  </div>
-
 
 <form method="post" action="/admin_sign_up_check" >
   
@@ -108,7 +108,7 @@
 
   <div class="form-group">
     <label for="enterPassword">Password</label>
-    <input type="password" class="form-control" id="member_password" name="password" placeholder="Password">
+    <input type="password" class="form-control" id="member_password" name=password" placeholder="Password">
   </div>
 
   <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
