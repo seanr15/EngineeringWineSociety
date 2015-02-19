@@ -42,5 +42,5 @@ exports.check = function(req, res){
                  });
       });
 		
-    res.render('admin_sign_up',{'status':[{'li_status':'Fail'}]});
+    //res.render('admin_sign_up',{'status':[{'li_status':'Fail'}]});
 };
