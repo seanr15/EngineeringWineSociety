@@ -22,13 +22,28 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/index" id='EWS'>Back</a>
+      
+      <ul class="nav navbar-nav navbar-left" id="Drop">
+        <li class="dropdown">
+
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Next Meeting on Tuesday, February 10, 2015<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+           <li><a href="#">Turn Meeting On</a></li>
+
+           <li><a href="#">Edit Meeting Time</a></li>
+          </ul>
+        </li>
+      </ul>      <!--
+      <form action="/index">
+      <input type="submit">
+      </form>
+      -->
+
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-text">
-        <li>Next Meeting on Tuesday, February 10, 2015</li>
-      </ul>
+
 
       <!--
       <form class="navbar-form navbar-right" role="search">
@@ -40,14 +55,11 @@
       -->
 
       <ul class="nav navbar-nav navbar-right" id="Drop">
+        <li><a href="/admin_sign_up">Member Sign Up</a></li>
+        <li><a href="/admin_enter_wine">Add Wines</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ADMIN<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-	    <li><a href="/index">All Wines</a></li>
-	    <li><a href="/admin_enter_wine">Add Wines</a></li>
-			
-            <li><a href="#">Settings</a></li>
-             <li class="divider"></li>
             <li><a href="/logout">Logout</a></li>
           </ul>
         </li>
@@ -57,6 +69,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 
 
 <div class="container-fluid">
