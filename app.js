@@ -26,6 +26,7 @@ var manual_add = require('./routes/manual_add');
 var user_index = require('./routes/user_index');
 var admin_sign_up = require('./routes/admin_sign_up');
 var admin_post_wine = require('./routes/admin_post_wine');
+var index2 = require('./routes/index2');
 
 
 var admin_sign_up_check = require('./routes/admin_sign_up_check');
@@ -78,6 +79,7 @@ app.post('/admin_post_wine',admin_post_wine.post_wine);
 
 app.get( '/user_all_wines',user_all_wines.view );
 app.get( '/posted_wines',posted_wines.posted_wines );
+app.get( '/index2', index2.view);
 
 app.get('/', login.view);
 
