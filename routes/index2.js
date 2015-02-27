@@ -21,7 +21,7 @@ exports.view = function(req, res){
 				i = i + 1;
 
       }
-    	res.render('index',allwines);
+    	res.render('index2',allwines);
 			
 		  client.end();
 
